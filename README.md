@@ -1,34 +1,7 @@
-⚡ Energy Consumption Forecasting
+## Predicting Energy Consumption
 
-📌 Overview :
-This project predicts hourly electricity consumption using historical load data and machine learning models. The workflow includes data preprocessing, feature engineering, model training, evaluation, and insights for energy demand planning.
+This project focuses on forecasting hourly electricity consumption using historical load data and machine learning techniques. The dataset was first cleaned and aligned to consistent hourly intervals, with missing values handled through interpolation and outliers treated using the IQR method. To capture temporal patterns, features such as time-based variables, cyclical encodings, lag values, and rolling statistics were engineered.
 
-🎯 Objective :
-Analyze consumption patterns
-Forecast hourly electricity demand
-Compare multiple ML models
+Multiple models, including Random Forest, XGBoost, and Linear Regression, were trained and evaluated. XGBoost achieved the best performance, demonstrating its effectiveness in capturing nonlinear relationships and seasonal demand patterns. The analysis revealed strong daily and weekly consumption cycles, with recent historical demand being the most influential predictor.
 
-🛠️ Approach :
-Cleaned and aligned hourly time-series data
-Created temporal, lag, and rolling features
-Trained Random Forest, XGBoost, and Linear Regression
-Tuned models using GridSearchCV
-
-📊 Results :
-Model	MAE	RMSE	R²
-Random Forest	70.31	96.70	0.9967
-XGBoost	62.47	84.83	0.9974
-Linear Regression	141.54	182.95	0.9881
-
-Best Model: XGBoost
-
-🔍 Key Insights:
-Strong daily and weekly demand patterns
-Lag features are the most important predictors
-Tree-based models perform best
-
-📦 Tech Stack :
-Python • Pandas • Scikit-learn • XGBoost • Matplotlib
-
-📌 Conclusion :
-Machine learning models, especially XGBoost, can accurately forecast electricity demand and support energy planning decisions.
+Overall, this project illustrates an end-to-end machine learning workflow for time-series forecasting and highlights how predictive models can support energy planning and decision-making.
